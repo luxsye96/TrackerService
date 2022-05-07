@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>d855edea-9cfb-43d8-9593-83c11db5847e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="MySqlConnector" Version="2.1.8" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.15.10" />
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
+  </ItemGroup>
+
+
+</Project>

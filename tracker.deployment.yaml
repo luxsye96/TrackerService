@@ -1,0 +1,39 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trackingsvc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trackingSvc
+  template:
+    metadata:
+      labels:
+        app: trackingSvc
+    spec:
+      imagePullSecrets:
+      - name: trackersec
+      containers:
+      - name: trackingservice
+        image: TrackerCluster.azurecr.io/trackingservice:latest
+        imagePullPolicy: Always
+        resources:
+        env:
+        - name: DBConnection
+          value: "Server=tcp:pftsq.database.windows.net;user=pft;password=Admin@10421;database=tracker_service;"
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tracking-service
+spec:
+  selector:
+      app: trackingSvc
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+
