@@ -21,10 +21,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
   </ItemGroup>
-    <ConnectionStrings>
-	 <add name="DBConnection"
-         connectionString="Server=tcp:pftsq.database.windows.net;user=pft;password=Admin@10421;database=tracker_service;" />
- 	</ConnectionStrings>
-
-
 </Project>

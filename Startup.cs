@@ -27,7 +27,7 @@ namespace TrackingService
             // string dbconn = Environment.GetEnvironmentVariable("DBConnection");
             //string dbconn = "Server=localhost;user=root;password=admin;database=tracking_service;";
             
-            string dbConn = configuration.GetSection("ConnectionStrings").GetSection("DBConnection").Value;  
+            string dbConn = configuration.GetConnectionString("DBConnection");;  
             services.AddMvc();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
