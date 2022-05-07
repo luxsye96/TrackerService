@@ -30,7 +30,7 @@ namespace TrackingService.Controllers
             {
                 string msg = _incomeService.CreateIncome(income);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -50,7 +50,7 @@ namespace TrackingService.Controllers
             {
                 string msg = _incomeService.EditIncome(income);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -71,7 +71,7 @@ namespace TrackingService.Controllers
             {
                 string msg = _incomeService.DeleteIncome(id);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -91,7 +91,7 @@ namespace TrackingService.Controllers
             {
                 List<Income> incomes = _incomeService.GetAllIncome();
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = "Sucessfully Fetched Income";
                 reponseWrapper.Result = incomes;
             }
             catch (Exception exception)
@@ -111,7 +111,7 @@ namespace TrackingService.Controllers
             {
                 List<Income> incomes = _incomeService.GetAllIncomeByDate(date);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = "Sucessfully Fetched Income";
                 reponseWrapper.Result = incomes;
             }
             catch (Exception exception)
@@ -132,7 +132,7 @@ namespace TrackingService.Controllers
             {
                 List<Income> incomes = _incomeService.GetAllIncomeByDateRange(sDate, eDate);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = "Sucessfully Fetched Income";
                 reponseWrapper.Result = incomes;
             }
             catch (Exception exception)
@@ -152,7 +152,7 @@ namespace TrackingService.Controllers
             {
                 ForcastDTO forcastDTOs = _incomeService.GetAvgIncome();
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = "Sucessfully Fetched average Income";
                 reponseWrapper.Result = forcastDTOs;
             }
             catch (Exception exception)

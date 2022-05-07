@@ -31,7 +31,7 @@ namespace TrackingService.Controllers
             {
                 string msg = _expService.CreateExpense(expenseDto);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -51,7 +51,7 @@ namespace TrackingService.Controllers
             {
                 string msg = _expService.EditExpense(expenseDto);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -72,7 +72,7 @@ namespace TrackingService.Controllers
             {
                 string msg = _expService.DeleteExpense(id);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -92,7 +92,7 @@ namespace TrackingService.Controllers
             {
                 List<Expense> expenseDtos = _expService.GetAllExpense();
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+             
                 reponseWrapper.Result = expenseDtos;
             }
             catch (Exception exception)
@@ -112,7 +112,7 @@ namespace TrackingService.Controllers
             {
                 List<Expense> expenseDtos = _expService.GetAllExpByDate(date);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                
                 reponseWrapper.Result = expenseDtos;
             }
             catch (Exception exception)
@@ -132,7 +132,7 @@ namespace TrackingService.Controllers
             {
                 List<Expense> incomes = _expService.GetAllExpByDateRange(sDate, eDate);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+            
                 reponseWrapper.Result = incomes;
             }
             catch (Exception exception)
@@ -155,7 +155,7 @@ namespace TrackingService.Controllers
                 ForcastDTO forcastDTO = _expService.GetAvgExpense();
 
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+            
                 reponseWrapper.Result = forcastDTO;
             }
             catch (Exception exception)

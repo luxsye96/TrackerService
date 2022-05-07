@@ -28,7 +28,7 @@ namespace TrackingService.Controllers
             {
                 string msg = categoryService.CreateCategory(category);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -47,7 +47,7 @@ namespace TrackingService.Controllers
             {
                 string msg = categoryService.EditCategory(category);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -68,7 +68,7 @@ namespace TrackingService.Controllers
             {
                 string msg = categoryService.DeleteCategory(id);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = msg;
             }
             catch (Exception exception)
             {
@@ -90,7 +90,6 @@ namespace TrackingService.Controllers
             {
                 List<Category> categories = categoryService.GetAllCategoryByType(type);
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
                 reponseWrapper.Result = categories;
             }
             catch (Exception exception)
@@ -110,7 +109,7 @@ namespace TrackingService.Controllers
             {
                 List<Category> categories = categoryService.GetAllCategory();
                 reponseWrapper.StatusCode = 200;
-                reponseWrapper.Message = "Sucessfully Added Income";
+                reponseWrapper.Message = "Sucessfully Fetched Category";
                 reponseWrapper.Result = categories;
             }
             catch (Exception exception)

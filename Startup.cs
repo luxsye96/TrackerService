@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 using TrackingService.Interface;
 using TrackingService.Repository;
 using TrackingService.Service;
@@ -26,8 +25,8 @@ namespace TrackingService
 
             // string dbconn = Environment.GetEnvironmentVariable("DBConnection");
             //string dbconn = "Server=localhost;user=root;password=admin;database=tracking_service;";
-            
-           string dbConn = Configuration.GetConnectionString("DBConnection");
+
+            string dbConn = Configuration.GetConnectionString("DBConnection");
             services.AddMvc();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
